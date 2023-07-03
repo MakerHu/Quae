@@ -1,0 +1,104 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --vt-c-white: #ffffff;
+  --vt-c-white-soft: #f8f8f8;
+  --vt-c-white-mute: #f2f2f2;
+
+  --vt-c-black: #181818;
+  --vt-c-black-soft: #222222;
+  --vt-c-black-mute: #282828;
+
+  --vt-c-indigo: #2c3e50;
+
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --vt-c-text-light-1: var(--vt-c-indigo);
+  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+  --vt-c-text-dark-1: var(--vt-c-white);
+  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--vt-c-white);
+  --color-background-soft: var(--vt-c-white-soft);
+  --color-background-mute: var(--vt-c-white-mute);
+
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-heading: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1);
+
+  --section-gap: 160px;
+}
+
+/* 本项目的常用css变量 */
+:root {
+  --kw-color-text-blue: rgba(0, 102, 204, 0.7);
+  --kw-color-text-grey: #757575;
+  --kw-color-background: #ededed;
+  --kw-box-shadow-high: 2px 2px 4px #c9c9c9,
+  -2px -2px 4px #ffffff;
+  --kw-box-shadow-low: 1px 1px 2px #c9c9c9,
+  -1px -1px 2px #ffffff;
+  --kw-inner-shadow-shallow: inset 1px 1px 3px #c9c9c9,
+  inset -1px -1px 3px #ffffff;
+  --kw-inner-shadow-deep: inset 2px 2px 5px #c9c9c9,
+  inset -2px -2px 5px #ffffff;
+  --kw-text-inner-shadow: 1px 3px 6px #fff, 0 0 0 #000, 1px 3px 6px #fff;
+}
+
+/* :root {
+  --kw-color-text-blue: rgba(0, 102, 204, 0.7);
+  --kw-color-background: #d7e6ee;
+  --kw-box-shadow-high: 2px 2px 4px #b7c4ca,
+  -2px -2px 4px #f7ffff;
+  --kw-box-shadow-low: 1px 1px 2px #b7c4ca,
+  -1px -1px 2px #f7ffff;
+  --kw-inner-shadow-shallow: inset 1px 1px 3px #b7c4ca,
+  inset -1px -1px 3px #f7ffff;
+  --kw-inner-shadow-deep: inset 2px 2px 5px #b7c4ca,
+  inset -2px -2px 5px #f7ffff;
+  --kw-text-inner-shadow: 1px 3px 6px #fff, 0 0 0 #000, 1px 3px 6px #fff;
+} */
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--vt-c-black);
+    --color-background-soft: var(--vt-c-black-soft);
+    --color-background-mute: var(--vt-c-black-mute);
+
+    --color-border: var(--vt-c-divider-dark-2);
+    --color-border-hover: var(--vt-c-divider-dark-1);
+
+    --color-heading: var(--vt-c-text-dark-1);
+    --color-text: var(--vt-c-text-dark-2);
+  }
+} */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  /* font-weight: normal; */
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

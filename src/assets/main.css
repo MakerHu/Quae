@@ -1,0 +1,151 @@
+@import './base.css';
+
+#app {
+  /* max-width: 1280px; */
+  /* margin: 0 auto; */
+  /* padding: 2rem; */
+  padding: 0;
+
+  font-weight: normal;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+} */
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    /* padding: 0 2rem; */
+    padding: 0;
+  }
+}
+
+/* 设置滚动条样式：开始 */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--kw-color-background);
+  box-shadow: var(--kw-inner-shadow-shallow);
+  border-radius: 2px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #bebebe;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #a7a7a7;
+}
+
+*::-webkit-scrollbar-corner {
+  background: var(--kw-color-background);
+}
+
+/* 设置滚动条样式：结束 */
+
+.my-shadow {
+  background: var(--kw-color-background);
+  box-shadow: var(--kw-box-shadow-high);
+}
+
+.my-shadow-low {
+  background: var(--kw-color-background);
+  box-shadow: var(--kw-box-shadow-low);
+  font-size: 96%;
+}
+
+.my-shadow-hover:hover {
+  background: var(--kw-color-background);
+  box-shadow: var(--kw-box-shadow-low);
+  font-size: 96%;
+}
+
+.inner-shadow {
+  background: var(--kw-color-background);
+  box-shadow: var(--kw-inner-shadow-shallow);
+  font-size: 96%;
+}
+
+.inner-shadow-deep {
+  background: var(--kw-color-background);
+  box-shadow: var(--kw-inner-shadow-deep);
+  font-size: 96%;
+}
+
+.inner-shadow-hover:hover {
+  background: var(--kw-color-background);
+  box-shadow: var(--kw-inner-shadow-shallow);
+  font-size: 96%;
+}
+
+.inner-shadow-deep-hover:hover {
+  background: var(--kw-color-background);
+  box-shadow: var(--kw-inner-shadow-deep);
+  font-size: 96%;
+}
+
+.text-inner-shadow {
+  text-shadow: var(--kw-text-inner-shadow);
+}
+
+.text-shadow {
+  text-shadow: #434343 0.1em 0.1em 0.2em;
+}
+
+.pointer:hover {
+  cursor: pointer;
+}
+
+.el-message {
+  text-shadow: var(--kw-text-inner-shadow);
+  background: #e6e6e6;
+  box-shadow: 29px 29px 58px #c4c4c4,
+    -29px -29px 58px #ffffff;
+  border: none;
+  border-radius: 10px;
+}
+
+/* .el-message--success {
+  background: #d3eed9;
+  box-shadow: 29px 29px 58px #b3cab8,
+  -29px -29px 58px #f3fffa;
+}
+
+.el-message--warning {
+  background: #fdeddd;
+  box-shadow: 29px 29px 58px #d7c9bc,
+  -29px -29px 58px #fffffe;
+}
+
+.el-message--error {
+  background: #efd7d7;
+  box-shadow: 29px 29px 58px #efd7d7,
+  -29px -29px 58px #fff7f7;
+} */
+
+.el-tag {
+  background: var(--kw-color-background);
+  box-shadow: var(--kw-box-shadow-low);
+}
