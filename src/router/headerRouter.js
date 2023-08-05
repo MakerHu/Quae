@@ -21,7 +21,7 @@ const headerRouter =
             path: 'tools/:toolId',
             props: true,    // 将路径参数转换为组件props
             meta: { title: '详情页', requiresAuth: false },
-            component: () => import('@/views/Demo.vue')
+            component: () => import('@/views/WhitePage.vue')
         },
     ]
 

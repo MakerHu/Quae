@@ -9,7 +9,7 @@
 
 <template>
     <div class="m-search">
-        <el-icon class="search-icon" :class="disabled ? '':'icon-hover'" :style="iconRight ? { right: '15px' } : { left: '15px' }" @click="onEnterKey">
+        <el-icon class="search-icon" :class="disabled ? '':'icon-hover'" :style="iconRight ? { right: '15px' } : { left: '15px' }">
             <component class="search-icon" :is="icon" />
         </el-icon>
         <input class="search-input text-inner-shadow inner-shadow" :class="disabled ? '':'inner-shadow-deep-hover input-hover'" v-model="value" :type="type" :disabled="disabled"
@@ -99,8 +99,8 @@ onMounted(() => {
     color: #5c5c5c;
 }
 
-.m-search:hover .icon-hover {
+/* .m-search:hover .icon-hover {
     width: 20px;
     height: 20px;
-}
+} */
 </style>

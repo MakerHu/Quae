@@ -11,13 +11,13 @@ const clientRouter =  // 客户端
         {
             path: 'tool-editor',
             meta: {title: '工具编辑器'},
-            component: () => import('@/views/Demo.vue')
+            component: () => import('@/views/WhitePage.vue')
         },
         {
             path: 'tool-editor/:id',
             props: true,    // 将路径参数转换为组件props
             meta: {title: '工具编辑器'},
-            component: () => import('@/views/Demo.vue')
+            component: () => import('@/views/WhitePage.vue')
         },
     ]
     

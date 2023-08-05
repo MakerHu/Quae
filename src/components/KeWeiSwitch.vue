@@ -49,7 +49,7 @@ onMounted(() => {
 .switch {
     width: 52px;
     padding: 1px;
-    margin: 10px 5px 5px 5px;
+    /* margin: 10px 5px 5px 5px; */
     /* display: flex;
     justify-content: right; */
     border-radius: 30px;

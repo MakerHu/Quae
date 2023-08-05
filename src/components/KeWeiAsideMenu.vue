@@ -1,6 +1,6 @@
 <template>
   <div class="local-center">
-    <KeWeiSwitch v-model="isOn"></KeWeiSwitch>
+    <KeWeiSwitch class="menu-switch-btn" v-model="isOn"></KeWeiSwitch>
   </div>
 
   <el-menu default-active="2" class="aside-menu" :collapse="!isOn" @open="handleOpen" @close="handleClose"
@@ -80,6 +80,10 @@ onMounted(() => {
 .aside-menu:not(.el-menu--collapse) {
   width: 200px;
   min-height: 100px;
+}
+
+.menu-switch-btn {
+    margin: 10px 5px 5px 5px;
 }
 
 .local-center {

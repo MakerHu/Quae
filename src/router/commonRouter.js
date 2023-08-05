@@ -15,7 +15,7 @@ const commonRouter =
         {
             path: 'test',
             meta: { title: '测试页面' },
-            component: () => import('@/views/Demo.vue')
+            component: () => import('@/views/WhitePage.vue')
         },
         {
             path: 'login',

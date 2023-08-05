@@ -29,7 +29,7 @@ const manageRouter =  // 管理端
                 {
                     path: 'list',
                     meta: {title: '测试2'},
-                    component: () => import('@/views/Demo.vue')
+                    component: () => import('@/views/WhitePage.vue')
                 },
             ]
         },

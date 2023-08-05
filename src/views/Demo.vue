@@ -1,59 +1,70 @@
 <template>
-    <h2>按钮组件</h2>
-    <div class="base-panel">
-        <KeWeiButton class="register-btn" type="high-shallow" @click="onBtnClick">按钮</KeWeiButton>
-    </div>
+    <div class="demo-container shadow-low">
+        <h2>按钮组件</h2>
+        <div class="base-panel">
+            <KeWeiButton class="demo-btn" type="high-low" @click="onBtnClick">高低按钮</KeWeiButton>
+            <KeWeiButton class="demo-btn" type="high-shallow" @click="onBtnClick">凹凸按钮</KeWeiButton>
+            <KeWeiButton class="demo-btn" type="low-shallow" @click="onBtnClick">浅凹凸按钮</KeWeiButton>
+            <KeWeiButton class="demo-btn" type="flat-shallow" @click="onBtnClick">内陷按钮</KeWeiButton>
+        </div>
+        <el-divider />
 
-    <h2>Switch开关</h2>
-    <div class="base-panel">
-        <KeWeiSwitch v-model="switchValue" @change="onSwitchChange"></KeWeiSwitch>
-        {{ switchValue }}
-    </div>
+        <h2>Switch开关</h2>
+        <div class="base-panel">
+            <KeWeiSwitch v-model="switchValue" @change="onSwitchChange"></KeWeiSwitch>
+            {{ switchValue }}
+        </div>
+        <el-divider />
 
-    <h2>输入框</h2>
-    <div class="base-panel">
-        <h3>普通用法</h3>
-        <KeWeiInput v-model="inputValue" placeholder="请输入" @onEnterKey="onInputEntry" />
-        <h3>禁止编辑</h3>
-        <KeWeiInput v-model="inputValue" placeholder="请输入" disabled @onEnterKey="onInputEntry" />
-        <h3>左侧带图标</h3>
-        <KeWeiInput v-model="inputValue" icon="User" placeholder="请输入" @onEnterKey="onInputEntry" />
-        <h3>右侧带图标</h3>
-        <KeWeiInput v-model="inputValue" :iconRight="true" icon="User" placeholder="请输入" @onEnterKey="onInputEntry" />
-        <h3>输入文字位置（left, center, right）</h3>
-        <KeWeiInput v-model="inputValue" :iconRight="true" textAlign="right" icon="User" placeholder="请输入"
-            @onEnterKey="onInputEntry" />
-        <h3>密码</h3>
-        <KeWeiInput v-model="inputValue" type="password" icon="Lock" placeholder="密码" @onEnterKey="onInputEntry" />
-    </div>
+        <h2>输入框</h2>
+        <div class="base-panel">
+            <h3>普通用法</h3>
+            <KeWeiInput v-model="inputValue" placeholder="请输入" @onEnterKey="onInputEntry" />
+            <h3>禁止编辑</h3>
+            <KeWeiInput v-model="inputValue" placeholder="不可编辑" disabled @onEnterKey="onInputEntry" />
+            <h3>左侧带图标</h3>
+            <KeWeiInput v-model="inputValue" icon="User" placeholder="请输入" @onEnterKey="onInputEntry" />
+            <h3>右侧带图标</h3>
+            <KeWeiInput v-model="inputValue" :iconRight="true" icon="User" placeholder="请输入" @onEnterKey="onInputEntry" />
+            <h3>输入文字位置（left, center, right）</h3>
+            <KeWeiInput v-model="inputValue" :iconRight="true" textAlign="right" icon="User" placeholder="请输入"
+                @onEnterKey="onInputEntry" />
+            <h3>密码</h3>
+            <KeWeiInput v-model="inputValue" type="password" icon="Lock" placeholder="密码" @onEnterKey="onInputEntry" />
+        </div>
+        <el-divider />
 
-    <h2>搜索框</h2>
-    <div class="base-panel">
-        <KeWeiSearch class="search" v-model="searchKeyword" placeholder="搜索" @onSearch="onSearch"></KeWeiSearch>
-    </div>
+        <h2>搜索框</h2>
+        <div class="base-panel">
+            <KeWeiSearch class="search" v-model="searchKeyword" placeholder="搜索" @onSearch="onSearch"></KeWeiSearch>
+        </div>
+        <el-divider />
 
-    <h2>表格组件</h2>
-    <div class="base-panel">
-        <KeWeiTable class="demo-table shadow-high" :table-settings="tableSettings" :data="tableData"
-            @onOpenClick="onOpenClick" @onEditClick="onEditClick" @row-dblclick="onRowDbClick">
-            <template #default="{ row, column, $index }">
-                <el-icon class="icon-btn pointer" @click="handleClick({ row, column, $index })">
-                    <EditPen />
-                </el-icon>
-                <el-icon class="icon-btn pointer" @click="handleClick({ row, column, $index })">
-                    <Edit />
-                </el-icon>
-            </template>
-            <template #attr3="{ row, column, $index }">
-                <el-tag>{{ row[column.property] }}</el-tag>
-            </template>
-        </KeWeiTable>
-    </div>
+        <h2>表格组件</h2>
+        <div class="base-panel">
+            <KeWeiTable class="demo-table shadow-high" :table-settings="tableSettings" :data="tableData"
+                @onOpenClick="onOpenClick" @onEditClick="onEditClick" @row-dblclick="onRowDbClick">
+                <template #default="{ row, column, $index }">
+                    <el-icon class="icon-btn pointer" @click="handleClick({ row, column, $index })">
+                        <EditPen />
+                    </el-icon>
+                    <el-icon class="icon-btn pointer" @click="handleClick({ row, column, $index })">
+                        <Edit />
+                    </el-icon>
+                </template>
+                <template #attr3="{ row, column, $index }">
+                    <el-tag>{{ row[column.property] }}</el-tag>
+                </template>
+            </KeWeiTable>
+        </div>
+        <el-divider />
 
-    <h2>分页组件</h2>
-    <div class="base-panel">
-        <KeWeiPagination class="page" v-model:current-page="pageParams.current" v-model:page-size="pageParams.size"
-            :pager-count="pagerCount" :page-count="10" @update:current-page="handleCurrentChange" />
+        <h2>分页组件</h2>
+        <div class="base-panel">
+            <KeWeiPagination class="page" v-model:current-page="pageParams.current" v-model:page-size="pageParams.size"
+                :pager-count="pagerCount" :page-count="10" @update:current-page="handleCurrentChange" />
+        </div>
+
     </div>
 </template>
 
@@ -251,11 +262,29 @@ onMounted(() => {
 </script>
 
 <style scoped>
+h2 {
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin: 10px 0;
+}
+
+.demo-container {
+    padding: 20px;
+    border-radius: 10px;
+}
+
 .base-panel {
     /* display: flex;
     justify-content: center; */
-    /* padding: 20px; */
-    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--kw-inner-shadow-shallow);
+}
+
+.demo-btn {
+    margin: 3px;
 }
 
 .icon-btn {
