@@ -1,14 +1,8 @@
-# kewei-web
+# Quae-魁
 
-This template should help get you started developing with Vue 3 in Vite.
+## 介绍
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+Quae（发音为/kwei/）中文名为魁，是一款用于快速构建小型网站的系统框架。前端使用 Vue3 + Element-Plus 开发，后端使用 SpringCloud 开发。它能够帮助你快速构建部署一个包含注册用户端、非注册用户端和管理端的 Web 应用程序。
 
 ## Project Setup
 
@@ -27,3 +21,7 @@ npm run dev
 ```sh
 npm run build
 ```
+
+## 维护者
+
+[MakerHu](https://github.com/MakerHu)
