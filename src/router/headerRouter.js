@@ -14,7 +14,7 @@ const headerRouter =
         },
         {
             path: 'tools',
-            meta: { title: '首页', requiresAuth: false },
+            meta: { title: '首页', requiresAuth: false, goBack: false },
             component: () => import('@/views/ToolCards.vue')
         },
         {

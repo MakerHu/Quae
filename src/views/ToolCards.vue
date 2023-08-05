@@ -2,13 +2,13 @@
     <div>
         <el-empty class="empty" description="没找着欸~" v-if="state.myToolsPage.total === 0" />
         <div class="tools-panel">
-            <div class="tool-card my-shadow my-shadow-hover pointer" v-for="tool in state.myToolsPage.records"
+            <div class="tool-card shadow-high shadow-high-hover pointer" v-for="tool in state.myToolsPage.records"
                 @click="useTool(tool.id)">
                 <div class="img-panel inner-shadow-deep inner-shadow-hover">
                     <!-- <img class="tool-img" :src="'http://static.simpledesktops.com/uploads/desktops/2015/07/11/Yosemite-Color-Block.png.295x184_q100.png'" :alt="tool.toolName"> -->
-                    <img class="tool-img my-shadow my-shadow-hover" :src="'/api/file/files/' + tool.imageUrl"
+                    <img class="tool-img shadow-high shadow-high-hover" :src="'/api/file/files/' + tool.imageUrl"
                         :alt="tool.toolName" v-if="!!tool.imageUrl">
-                    <div class="default-img test-inner-shadow my-shadow my-shadow-hover" v-else>{{ tool.toolName }}</div>
+                    <div class="default-img test-inner-shadow shadow-high shadow-high-hover" v-else>{{ tool.toolName }}</div>
                 </div>
                 <div class="desc-panel">
                     <!-- <div class="dev-name text-inner-shadow">by {{ tool.devName }}</div> -->

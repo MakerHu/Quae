@@ -110,7 +110,6 @@ ul {
 .el-menu-item.first-menu-item:active {
   background: var(--kw-color-background);
   box-shadow: var(--kw-box-shadow-low);
-  font-size: 96%;
 }
 
 .el-menu-item.first-menu-item:hover {
@@ -121,7 +120,6 @@ ul {
   background: var(--kw-color-background);
   box-shadow: var(--kw-box-shadow-low);
   color: black;
-  font-size: 96%;
 }
 
 .el-sub-menu__title {
@@ -135,7 +133,6 @@ ul {
 .el-sub-menu__title:active {
   background: var(--kw-color-background);
   box-shadow: var(--kw-box-shadow-low);
-  font-size: 96%;
 }
 
 .el-sub-menu__title:hover {
@@ -154,7 +151,6 @@ ul {
   border-radius: 5px;
   background: var(--kw-color-background);
   box-shadow: var(--kw-inner-shadow-shallow);
-  font-size: 96%;
 }
 
 .el-menu-item.is-active {
@@ -163,7 +159,6 @@ ul {
   background: var(--kw-color-background);
   box-shadow: var(--kw-inner-shadow-shallow);
   color: black;
-  font-size: 96%;
 }
 
 .el-tooltip__trigger {

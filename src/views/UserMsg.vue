@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="msg-panel my-shadow">
+        <div class="msg-panel shadow-high">
             <div class="logo">
                 用户信息
             </div>

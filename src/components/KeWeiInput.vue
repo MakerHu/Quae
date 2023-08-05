@@ -58,10 +58,6 @@ onMounted(() => {
     color: #5c5c5c;
 }
 
-.m-search:hover .input-hover {
-    font-size: 96%;
-}
-
 .search-icon {
     z-index: 999;
     width: 22px;

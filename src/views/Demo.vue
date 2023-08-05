@@ -1,7 +1,7 @@
 <template>
     <div class="base-panel">
         <div>
-            <KeWeiTable class="m-table my-shadow" :table-settings="tableSettings" :data="tableData"
+            <KeWeiTable class="m-table shadow-high" :table-settings="tableSettings" :data="tableData"
                 @onOpenClick="onOpenClick" @onEditClick="onEditClick" @row-dblclick="onRowDbClick">
                 <template #default="{ row, column, $index }">
                     <div class="t-btn btn btn-hover" @click="handleClick({ row, column, $index })">按钮</div>

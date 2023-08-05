@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="msg-panel my-shadow">
+        <div class="msg-panel shadow-high">
             <div class="logo">
                 {{ passwordEditable ? '修改密码' : '个人信息' }}
             </div>

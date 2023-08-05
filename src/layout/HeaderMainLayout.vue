@@ -5,7 +5,7 @@
                 <KeWeiHeadNav :has-search="true"></KeWeiHeadNav>
             </el-header>
             <el-main class="m-main">
-                <el-page-header class="goback" @back="goBack" icon="ArrowLeftBold">
+                <el-page-header class="goback" v-if="!(route.meta.goBack === false)" @back="goBack" icon="ArrowLeftBold">
                     <template #title>
                         <span>返回</span>
                     </template>
@@ -18,7 +18,7 @@
             <!-- <el-footer class="m-footer">©可微</el-footer> -->
         </el-container>
     </div>
-    <el-backtop class="m-backtop my-shadow" target=".m-main" :right="100" :bottom="50" />
+    <el-backtop class="m-backtop shadow-high" target=".m-main" :right="100" :bottom="50" />
 </template>
 
 <script setup>

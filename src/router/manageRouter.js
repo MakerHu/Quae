@@ -6,7 +6,7 @@ import { RouterView } from 'vue-router'
 const manageRouter =  // 管理端
 {
     path: '/manage', 
-    component: () => import('@/layout/AppLayout.vue'),
+    component: () => import('@/layout/HeaderAsideLayout.vue'),
     children: [
         {
             path: 'users',

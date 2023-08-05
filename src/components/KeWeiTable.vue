@@ -1,6 +1,6 @@
 <!-- 
     使用方式如下：
-    <KeWeiTable class="m-table my-shadow"
+    <KeWeiTable class="m-table shadow-high"
     :table-settings="tableSettings"
     :data="tableData"
     @onOpenClick="onOpenClick"

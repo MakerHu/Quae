@@ -5,7 +5,7 @@
                 可 微 工 具 箱
             </div>
         </div>
-        <div class="login-panel my-shadow">
+        <div class="login-panel shadow-high">
             <div class="logo">
                 <img class="pointer" src="../assets/logo.svg" alt="logo" @click="onLogoClick()" width="100" height="100">
             </div>

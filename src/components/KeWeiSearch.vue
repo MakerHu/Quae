@@ -39,11 +39,12 @@ onMounted(() => {
 <style scoped>
 .m-search {
     display:inline-block;
+    height: 40px;
 }
 
 .search-input {
     width: 100%;
-    height: 40px;
+    height: 100%;
     outline: none;
     border: 0px;
     border-radius: 20px;
@@ -71,9 +72,5 @@ onMounted(() => {
     width: 20px;
     height: 20px;
     /* color: black; */
-}
-
-.m-search:hover .search-input{
-    font-size: 96%;
 }
 </style>

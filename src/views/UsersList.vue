@@ -1,14 +1,14 @@
 <template>
     <div class="shift">
-        <div class="shift-btn pointer" :class="pageParams.role === 'ALL' ? 'inner-shadow' : 'my-shadow'"
+        <div class="shift-btn pointer" :class="pageParams.role === 'ALL' ? 'inner-shadow' : 'shadow-high'"
             @click="onShift('ALL')">全部</div>
-        <div class="shift-btn pointer" :class="pageParams.role === 'ADMIN' ? 'inner-shadow' : 'my-shadow'" @click="onShift('ADMIN')">
+        <div class="shift-btn pointer" :class="pageParams.role === 'ADMIN' ? 'inner-shadow' : 'shadow-high'" @click="onShift('ADMIN')">
             管理</div>
-        <div class="shift-btn pointer" :class="pageParams.role === 'USER' ? 'inner-shadow' : 'my-shadow'" @click="onShift('USER')">
+        <div class="shift-btn pointer" :class="pageParams.role === 'USER' ? 'inner-shadow' : 'shadow-high'" @click="onShift('USER')">
             用户</div>
     </div>
     <KeWeiSearch class="search" v-model="pageParams.keywords" placeholder="搜索" @onSearch="search"></KeWeiSearch>
-    <KeWeiTable class="tools-table my-shadow" :table-settings="tableSettings" :data="state.usersPage.records"
+    <KeWeiTable class="tools-table shadow-high" :table-settings="tableSettings" :data="state.usersPage.records"
         @onOpenClick="onOpenClick" @onEditClick="onEditClick" @row-dblclick="onRowDbClick">
         <template #role="{ row, column, $index }">
             {{ roleDict[row[column.property]] }}

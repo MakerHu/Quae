@@ -6,7 +6,7 @@ import { RouterView } from 'vue-router'
 const clientNavRouter =  // 客户端
 {
     path: '/user', 
-    component: () => import('@/layout/AppLayout.vue'),
+    component: () => import('@/layout/HeaderAsideLayout.vue'),
     children: [
         {
             path: 'profile',

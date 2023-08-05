@@ -12,11 +12,11 @@
         </div>
         <div class="right">
             <div class="avatar pointer">
-                <div class="username my-shadow text-none-select" @click="onAvatarClick()">
+                <div class="username shadow-high text-none-select" @click="onAvatarClick()">
                     {{ username }}
                 </div>
             </div>
-            <div class="more my-shadow" v-show="showMore">
+            <div class="more shadow-high" v-show="showMore">
                 <div>
                     <KeWeiButton class="more-btn" type="low-shallow" @click="onLoginClick()">登&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;录</KeWeiButton>
                 </div>
@@ -131,7 +131,7 @@ onMounted(() => {
 }
 
 .logo {
-    height: 100%;
+    height: 60px;
     color: var(--kw-color-text-blue);
     font-size: 28px;
     display: flex;

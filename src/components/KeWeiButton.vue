@@ -51,7 +51,6 @@ const props = defineProps({
 
 .high-low:active {
     box-shadow: var(--kw-box-shadow-low);
-    font-size: 96%;
 }
 
 .high-shallow {
@@ -60,12 +59,10 @@ const props = defineProps({
 
 .high-shallow:active {
     box-shadow: var(--kw-inner-shadow-shallow);
-    font-size: 96%;
 }
 
 .flat-shallow:active {
     box-shadow: var(--kw-inner-shadow-shallow);
-    font-size: 96%;
 }
 
 .low-shallow {
@@ -74,6 +71,5 @@ const props = defineProps({
 
 .low-shallow:active {
     box-shadow: var(--kw-inner-shadow-shallow);
-    font-size: 96%;
 }
 </style>

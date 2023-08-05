@@ -26,45 +26,39 @@
   }
   /* 设置滚动条样式：结束 */
   
-  .my-shadow {
+  .shadow-high {
     background: var(--kw-color-background);
     box-shadow: var(--kw-box-shadow-high);
   }
   
-  .my-shadow-low {
+  .shadow-low {
     background: var(--kw-color-background);
     box-shadow: var(--kw-box-shadow-low);
-    font-size: 96%;
   }
   
-  .my-shadow-hover:hover {
+  .shadow-high-hover:hover {
     background: var(--kw-color-background);
     box-shadow: var(--kw-box-shadow-low);
-    font-size: 96%;
   }
   
   .inner-shadow {
     background: var(--kw-color-background);
     box-shadow: var(--kw-inner-shadow-shallow);
-    font-size: 96%;
   }
   
   .inner-shadow-deep {
     background: var(--kw-color-background);
     box-shadow: var(--kw-inner-shadow-deep);
-    font-size: 96%;
   }
   
   .inner-shadow-hover:hover {
     background: var(--kw-color-background);
     box-shadow: var(--kw-inner-shadow-shallow);
-    font-size: 96%;
   }
   
   .inner-shadow-deep-hover:hover {
     background: var(--kw-color-background);
     box-shadow: var(--kw-inner-shadow-deep);
-    font-size: 96%;
   }
   
   .text-inner-shadow {

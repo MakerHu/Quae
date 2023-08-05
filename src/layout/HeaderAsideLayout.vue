@@ -10,7 +10,7 @@
                 </el-aside>
                 <el-container>
                     <el-main class="m-main">
-                        <el-page-header class="goback" @back="goBack" icon="ArrowLeftBold">
+                        <el-page-header class="goback" v-if="!(route.meta.goBack === false)" @back="goBack" icon="ArrowLeftBold">
                             <template #title>
                                 <span>返回</span>
                             </template>
