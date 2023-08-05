@@ -1,5 +1,5 @@
 <!-- 使用方法如下
-<KeWeiSearch class="search" v-model="keyword" placeholder="搜索" @onSearch="search"></KeWeiSearch>
+<QuaeSearch class="search" v-model="keyword" placeholder="搜索" @onSearch="search"></QuaeSearch>
 注：按回车和点击搜索图标时会触发 onSearch
 -->
 
@@ -65,7 +65,7 @@ onMounted(() => {
 }
 
 .search-icon:hover {
-    color: var(--kw-color-text-blue);
+    color: var(--quae-color-text-blue);
 }
 
 .m-search:hover .search-icon{

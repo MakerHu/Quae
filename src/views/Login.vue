@@ -11,18 +11,18 @@
             </div>
 
             <div class="input-container">
-                <KeWeiInput class="login-input input-username" v-model="user.uname" icon="User" placeholder="用户名">
-                </KeWeiInput>
+                <QuaeInput class="login-input input-username" v-model="user.uname" icon="User" placeholder="用户名">
+                </QuaeInput>
             </div>
             <div class="input-container">
-                <KeWeiInput class="login-input input-passowrd" v-model="user.password" type="password" icon="Lock"
+                <QuaeInput class="login-input input-passowrd" v-model="user.password" type="password" icon="Lock"
                     placeholder="密码" @onEnterKey="login" />
             </div>
             <div class="button-panel">
-                <KeWeiButton class="login-btn" @click="login">登 录</KeWeiButton>
+                <QuaeButton class="login-btn" @click="login">登 录</QuaeButton>
             </div>
             <div class="button-panel">
-                <KeWeiButton class="register-btn" type="flat-shallow" @click="goRegister">注 册</KeWeiButton>
+                <QuaeButton class="register-btn" type="flat-shallow" @click="goRegister">注 册</QuaeButton>
             </div>
         </div>
     </div>
@@ -32,8 +32,8 @@
 import { ref, reactive } from 'vue'
 import { useStore } from 'vuex'
 import { useRouter } from 'vue-router'
-import KeWeiInput from '@/components/KeWeiInput.vue'
-import KeWeiButton from '@/components/KeWeiButton.vue'
+import QuaeInput from '@/components/QuaeInput.vue'
+import QuaeButton from '@/components/QuaeButton.vue'
 
 const router = useRouter()
 const store = useStore()
@@ -66,7 +66,7 @@ const goRegister = () => {
 .login-container {
     height: 100%;
     padding: 10px;
-    background: var(--kw-color-background);
+    background: var(--quae-color-background);
     overflow: auto;
 }
 
@@ -89,7 +89,7 @@ const goRegister = () => {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--kw-color-text-blue);
+    color: var(--quae-color-text-blue);
     font-size: 28px;
     font-weight: 700;
     padding: 0 30px;
@@ -132,12 +132,12 @@ const goRegister = () => {
 .login-btn {
     width: 90%;
     border-radius: 20px;
-    color: var(--kw-color-text-blue);
+    color: var(--quae-color-text-blue);
 }
 
 .register-btn {
     width: 90%;
     border-radius: 20px;
-    color: var(--kw-color-text-grey);
+    color: var(--quae-color-text-grey);
 }
 </style>

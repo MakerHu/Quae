@@ -1,5 +1,5 @@
 <!-- 使用方式如下
-<KeWeiPagination class="page"
+<QuaePagination class="page"
     v-model:current-page="pageParams.current"
     v-model:page-size="pageParams.size"
     :pager-count="pagerCount"
@@ -8,7 +8,7 @@
 -->
 
 <template>
-    <div class="kewei-page">
+    <div class="quae-page">
         <el-pagination v-model:current-page="mCurrentPage" v-model:page-size="mPageSize"
             :pager-count="mPagerCount" :page-count="mPageCount"
             layout="prev, pager, next" />
@@ -63,7 +63,7 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.kewei-page {
+.quae-page {
     display: flex;
     justify-content: center;
 }
@@ -76,8 +76,8 @@ onMounted(() => {
 :deep(.more) {
     /* background-color: #c40404; */
     margin: 3px;
-    background: var(--kw-color-background);
-    box-shadow: var(--kw-box-shadow-high);
+    background: var(--quae-color-background);
+    box-shadow: var(--quae-box-shadow-high);
 }
 
 :deep(.number):active,
@@ -87,8 +87,8 @@ onMounted(() => {
 :deep(.btn-prev)[disabled]:active,
 :deep(.more):active {
 
-    background-color: var(--kw-color-background);
-    box-shadow: var(--kw-box-shadow-low);
+    background-color: var(--quae-color-background);
+    box-shadow: var(--quae-box-shadow-low);
     color: #5c5c5c;
 }
 
@@ -99,25 +99,25 @@ onMounted(() => {
 :deep(.btn-prev)[disabled]:hover,
 :deep(.more):hover {
 
-    background-color: var(--kw-color-background);
+    background-color: var(--quae-color-background);
     color: #5c5c5c;
 }
 
 :deep(.el-pager .is-active) {
-    color: var(--kw-color-text-blue);
-    text-shadow: var(--kw-text-inner-shadow);
-  box-shadow: var(--kw-box-shadow-low);
+    color: var(--quae-color-text-blue);
+    text-shadow: var(--quae-text-inner-shadow);
+  box-shadow: var(--quae-box-shadow-low);
 }
 
 :deep(.el-pager .is-active):active {
-    color: var(--kw-color-text-blue);
-    text-shadow: var(--kw-text-inner-shadow);
+    color: var(--quae-color-text-blue);
+    text-shadow: var(--quae-text-inner-shadow);
 }
 
 :deep(.btn-prev.is-first)[disabled],
 :deep(.btn-next.is-last)[disabled]
  {
     color: #a8abb2;
-    box-shadow: var(--kw-box-shadow-high);
+    box-shadow: var(--quae-box-shadow-high);
 }
 </style>

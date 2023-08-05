@@ -38,18 +38,18 @@
 
 /* 本项目的常用css变量 */
 :root {
-  --kw-color-text-blue: rgba(0, 102, 204, 0.7);
-  --kw-color-text-grey: #757575;
-  --kw-color-background: #ededed;
-  --kw-box-shadow-high: 2px 2px 4px #c9c9c9,
+  --quae-color-text-blue: rgba(0, 102, 204, 0.7);
+  --quae-color-text-grey: #757575;
+  --quae-color-background: #ededed;
+  --quae-box-shadow-high: 2px 2px 4px #c9c9c9,
   -2px -2px 4px #ffffff;
-  --kw-box-shadow-low: 1px 1px 2px #c9c9c9,
+  --quae-box-shadow-low: 1px 1px 2px #c9c9c9,
   -1px -1px 2px #ffffff;
-  --kw-inner-shadow-shallow: inset 1px 1px 3px #c9c9c9,
+  --quae-inner-shadow-shallow: inset 1px 1px 3px #c9c9c9,
   inset -1px -1px 3px #ffffff;
-  --kw-inner-shadow-deep: inset 2px 2px 5px #c9c9c9,
+  --quae-inner-shadow-deep: inset 2px 2px 5px #c9c9c9,
   inset -2px -2px 5px #ffffff;
-  --kw-text-inner-shadow: 1px 3px 6px #fff, 0 0 0 #000, 1px 3px 6px #fff;
+  --quae-text-inner-shadow: 1px 3px 6px #fff, 0 0 0 #000, 1px 3px 6px #fff;
 }
 
 /* @media (prefers-color-scheme: dark) {

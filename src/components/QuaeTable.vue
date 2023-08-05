@@ -1,6 +1,6 @@
 <!-- 
     使用方式如下：
-    <KeWeiTable class="m-table shadow-high"
+    <QuaeTable class="m-table shadow-high"
     :table-settings="tableSettings"
     :data="tableData"
     @onOpenClick="onOpenClick"
@@ -12,7 +12,7 @@
         <template #attr1="{ row, column, $index }">
             <strong>{{ row[column.property] }}</strong>
         </template>
-    </KeWeiTable>
+    </QuaeTable>
 
     // 表格的配置属性
     tableSettings = reactive({
@@ -47,7 +47,7 @@
 }) -->
 
 <template>
-    <el-table class="kewei-table" :data="data" :max-height="tableSettings.maxHeight" tooltip-effect="light" empty-text="无数据"
+    <el-table class="quae-table" :data="data" :max-height="tableSettings.maxHeight" tooltip-effect="light" empty-text="无数据"
         :row-style="rowStyle" :header-row-style="headerRowStyle" :header-cell-style="headerCellStyle"
         @row-dbclick="onRowDbClick">
         <el-table-column v-if="tableSettings.firstColumn" fixed="left" :label="tableSettings.firstColumn.label"
@@ -61,10 +61,10 @@
         <el-table-column v-if="tableSettings.operation" :fixed="tableSettings.operation.fixed"
             :label="tableSettings.operation.label" :width="tableSettings.operation.width">
             <template #default="{ row, column, $index }">
-                <KeWeiButton class="btn" v-if="tableSettings.operation.open"
-                    @click="handleClick('onOpenClick', { row, column, $index })">{{ tableSettings.operation.open }}</KeWeiButton>
-                <KeWeiButton class="btn" v-if="tableSettings.operation.edit"
-                    @click="handleClick('onEditClick', { row, column, $index })">{{ tableSettings.operation.edit }}</KeWeiButton>
+                <QuaeButton class="btn" v-if="tableSettings.operation.open"
+                    @click="handleClick('onOpenClick', { row, column, $index })">{{ tableSettings.operation.open }}</QuaeButton>
+                <QuaeButton class="btn" v-if="tableSettings.operation.edit"
+                    @click="handleClick('onEditClick', { row, column, $index })">{{ tableSettings.operation.edit }}</QuaeButton>
                 <slot :row="row" :column="column" :$index="$index"></slot>
             </template>
         </el-table-column>
@@ -73,7 +73,7 @@
 
 <script setup>
 import { onMounted } from 'vue'
-import KeWeiButton from '@/components/KeWeiButton.vue'
+import QuaeButton from '@/components/QuaeButton.vue'
 
 const emit = defineEmits(['onOpenClick', 'onEditClick', 'rowDbclick'])
 
@@ -98,7 +98,7 @@ const onRowDbClick = (params) => {
 
 const rowStyle = (obj) => {
     return {
-        'background': 'var(--kw-color-background)',
+        'background': 'var(--quae-color-background)',
         'box-shadow': 'var(--mt-box-inner-shadow)'
     }
 }
@@ -106,16 +106,16 @@ const rowStyle = (obj) => {
 const headerRowStyle = (obj) => {
     return {
         'height': '40px',
-        'background-color': 'var(--kw-color-background)',
+        'background-color': 'var(--quae-color-background)',
         'color': 'black',
         'font-size': '13px',
-        'text-shadow': 'var(--kw-text-inner-shadow)'
+        'text-shadow': 'var(--quae-text-inner-shadow)'
     }
 }
 
 const headerCellStyle = (obj) => {
     return {
-        'background': 'var(--kw-color-background)',
+        'background': 'var(--quae-color-background)',
         'box-shadow': 'var(--mt-box-inner-shadow)',
     }
 }
@@ -126,25 +126,25 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.kewei-table {
+.quae-table {
     --mt-box-inner-shadow: inset 1px 1px 2px #c9c9c9,
         inset -1px -1px 2px #ffffff;
 }
 
 :deep(.el-table__body, .el-table__footer, .el-table__header) {
-    background-color: var(--kw-color-background);
-    text-shadow: var(--kw-text-inner-shadow);
+    background-color: var(--quae-color-background);
+    text-shadow: var(--quae-text-inner-shadow);
 }
 
 :deep(.el-table__body-wrapper tr td.el-table-fixed-column--left),
 :deep(.el-table__body-wrapper tr td.el-table-fixed-column--right) {
-    background: var(--kw-color-background);
+    background: var(--quae-color-background);
     /* background: transparent; */
     box-shadow: var(--mt-box-inner-shadow);
 }
 
 :deep(.el-table__body-wrapper tr.hover-row):hover>td {
-    background-color: var(--kw-color-background);
+    background-color: var(--quae-color-background);
     box-shadow: 0px 2px 2px #c9c9c9,
         0px -2px 2px #ffffff;
 }

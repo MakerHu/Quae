@@ -2,11 +2,11 @@
     <div class="common-layout">
         <el-container class="base-container">
             <el-header class="m-header">
-                <KeWeiHeadNav :has-search="true"></KeWeiHeadNav>
+                <QuaeHeadNav :has-search="true"></QuaeHeadNav>
             </el-header>
             <el-container>
                 <el-aside class="m-aside">
-                    <KeWeiAsideMenu></KeWeiAsideMenu>
+                    <QuaeAsideMenu></QuaeAsideMenu>
                 </el-aside>
                 <el-container>
                     <el-main class="m-main">
@@ -28,8 +28,8 @@
 </template>
   
 <script setup>
-import KeWeiAsideMenu from '@/components/KeWeiAsideMenu.vue'
-import KeWeiHeadNav from '@/components/KeWeiHeadNav.vue'
+import QuaeAsideMenu from '@/components/QuaeAsideMenu.vue'
+import QuaeHeadNav from '@/components/QuaeHeadNav.vue'
 import { useRoute, useRouter } from 'vue-router'
 
 const route = useRoute()
@@ -54,8 +54,8 @@ const goBack = () => {
 
 .m-header {
     z-index: 999;
-    background: var(--kw-color-background);
-    box-shadow: var(--kw-box-shadow-high);
+    background: var(--quae-color-background);
+    box-shadow: var(--quae-box-shadow-high);
     position: sticky;
     top: 0;
 }
@@ -63,13 +63,13 @@ const goBack = () => {
 .m-aside {
     z-index: 998;
     width: auto;
-    background: var(--kw-color-background);
-    box-shadow: var(--kw-box-shadow-high);
+    background: var(--quae-color-background);
+    box-shadow: var(--quae-box-shadow-high);
 }
 
 .m-main {
     /* background: #f0f0f0; */
-    background: var(--kw-color-background);
+    background: var(--quae-color-background);
     box-shadow: inset 2px 2px 4px #c9c9c9,
         inset -2px -2px 4px #ffffff;
     height: calc(100vh - 60px);
@@ -77,7 +77,7 @@ const goBack = () => {
 }
 
 .m-footer {
-    background: var(--kw-color-background);
+    background: var(--quae-color-background);
 }
 
 .goback {

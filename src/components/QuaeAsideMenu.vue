@@ -1,6 +1,6 @@
 <template>
   <div class="local-center">
-    <KeWeiSwitch class="menu-switch-btn" v-model="isOn"></KeWeiSwitch>
+    <QuaeSwitch class="menu-switch-btn" v-model="isOn"></QuaeSwitch>
   </div>
 
   <el-menu default-active="2" class="aside-menu" :collapse="!isOn" @open="handleOpen" @close="handleClose"
@@ -44,7 +44,7 @@ import manageNavRouter from '@/router/manageNavRouter'
 import clientNavRouter from '@/router/clientNavRouter'
 import { useRouter } from 'vue-router'
 import { useStore } from 'vuex'
-import KeWeiSwitch from '@/components/KeWeiSwitch.vue'
+import QuaeSwitch from '@/components/QuaeSwitch.vue'
 
 const router = useRouter()
 const store = useStore()
@@ -100,29 +100,29 @@ ul {
 }
 
 .el-menu {
-  background-color: var(--kw-color-background);
+  background-color: var(--quae-color-background);
 }
 
 .el-menu-item.first-menu-item {
   z-index: 999;
   margin: 5px;
   border-radius: 5px;
-  background: var(--kw-color-background);
-  box-shadow: var(--kw-box-shadow-high);
+  background: var(--quae-color-background);
+  box-shadow: var(--quae-box-shadow-high);
 }
 
 .el-menu-item.first-menu-item:active {
-  background: var(--kw-color-background);
-  box-shadow: var(--kw-box-shadow-low);
+  background: var(--quae-color-background);
+  box-shadow: var(--quae-box-shadow-low);
 }
 
 .el-menu-item.first-menu-item:hover {
-  background: var(--kw-color-background);
+  background: var(--quae-color-background);
 }
 
 .el-menu-item.first-menu-item.is-active {
-  background: var(--kw-color-background);
-  box-shadow: var(--kw-box-shadow-low);
+  background: var(--quae-color-background);
+  box-shadow: var(--quae-box-shadow-low);
   color: black;
 }
 
@@ -130,38 +130,38 @@ ul {
   z-index: 999;
   margin: 5px;
   border-radius: 5px;
-  background: var(--kw-color-background);
-  box-shadow: var(--kw-box-shadow-high);
+  background: var(--quae-color-background);
+  box-shadow: var(--quae-box-shadow-high);
 }
 
 .el-sub-menu__title:active {
-  background: var(--kw-color-background);
-  box-shadow: var(--kw-box-shadow-low);
+  background: var(--quae-color-background);
+  box-shadow: var(--quae-box-shadow-low);
 }
 
 .el-sub-menu__title:hover {
-  background: var(--kw-color-background);
+  background: var(--quae-color-background);
 }
 
 .el-menu-item:hover {
   margin: 5px;
   border-radius: 5px;
-  background: var(--kw-color-background);
-  box-shadow: var(--kw-box-shadow-low);
+  background: var(--quae-color-background);
+  box-shadow: var(--quae-box-shadow-low);
 }
 
 .el-menu-item:active {
   margin: 5px;
   border-radius: 5px;
-  background: var(--kw-color-background);
-  box-shadow: var(--kw-inner-shadow-shallow);
+  background: var(--quae-color-background);
+  box-shadow: var(--quae-inner-shadow-shallow);
 }
 
 .el-menu-item.is-active {
   margin: 5px;
   border-radius: 5px;
-  background: var(--kw-color-background);
-  box-shadow: var(--kw-inner-shadow-shallow);
+  background: var(--quae-color-background);
+  box-shadow: var(--quae-inner-shadow-shallow);
   color: black;
 }
 

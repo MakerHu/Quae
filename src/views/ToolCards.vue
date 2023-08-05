@@ -18,7 +18,7 @@
             </div>
         </div>
 
-        <KeWeiPagination class="page" v-model:current-page="pageParams.current" v-model:page-size="pageParams.size"
+        <QuaePagination class="page" v-model:current-page="pageParams.current" v-model:page-size="pageParams.size"
             :pager-count="pagerCount" :page-count="state.myToolsPage.pages" @update:current-page="handleCurrentChange" />
     </div>
 </template>
@@ -31,7 +31,7 @@ import emitter from '@/bus/eventBus'
 import { ElMessage } from 'element-plus'
 import { getToolsPage } from '@/apis/ToolApi'
 
-import KeWeiPagination from '@/components/KeWeiPagination.vue'
+import QuaePagination from '@/components/QuaePagination.vue'
 
 const store = useStore()
 const router = useRouter()

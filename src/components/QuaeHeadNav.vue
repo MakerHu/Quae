@@ -3,12 +3,12 @@
         <div class="left">
             <div class="logo text-inner-shadow pointer text-none-select" @click="onLogoClick()">
                 <img class="logo-img" src="../assets/logo.svg" alt="logo" width="35" height="35">
-                <span>可微</span>
+                <span>Quae-魁</span>
             </div>
         </div>
         <div class="center">
-            <KeWeiSearch class="search" v-if="hasSearch" v-model="keyword" placeholder="搜索" @onSearch="onSearch">
-            </KeWeiSearch>
+            <QuaeSearch class="search" v-if="hasSearch" v-model="keyword" placeholder="搜索" @onSearch="onSearch">
+            </QuaeSearch>
         </div>
         <div class="right">
             <div class="avatar pointer">
@@ -18,10 +18,10 @@
             </div>
             <div class="more shadow-high" v-show="showMore">
                 <div>
-                    <KeWeiButton class="more-btn" type="low-shallow" @click="onLoginClick()">登&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;录</KeWeiButton>
+                    <QuaeButton class="more-btn" type="low-shallow" @click="onLoginClick()">登&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;录</QuaeButton>
                 </div>
                 <div>
-                    <KeWeiButton class="more-btn" type="low-shallow" @click="onProfileClick()">个人中心</KeWeiButton>
+                    <QuaeButton class="more-btn" type="low-shallow" @click="onProfileClick()">个人中心</QuaeButton>
                 </div>
             </div>
         </div>
@@ -34,8 +34,8 @@ import { useRouter } from 'vue-router'
 import { useStore } from 'vuex'
 import { pinyin } from 'pinyin-pro'
 import emitter from '@/bus/eventBus'
-import KeWeiSearch from '@/components/KeWeiSearch.vue'
-import KeWeiButton from '@/components/KeWeiButton.vue'
+import QuaeSearch from '@/components/QuaeSearch.vue'
+import QuaeButton from '@/components/QuaeButton.vue'
 
 const store = useStore()
 const router = useRouter()
@@ -132,7 +132,7 @@ onMounted(() => {
 
 .logo {
     height: 60px;
-    color: var(--kw-color-text-blue);
+    color: var(--quae-color-text-blue);
     font-size: 28px;
     display: flex;
     justify-content: left;
@@ -165,13 +165,13 @@ onMounted(() => {
     justify-content: center;
     align-items: center;
     font-size: large;
-    color: var(--kw-color-text-blue);
-    text-shadow: var(--kw-text-inner-shadow);
+    color: var(--quae-color-text-blue);
+    text-shadow: var(--quae-text-inner-shadow);
 }
 
 .username:active {
-    background: var(--kw-color-background);
-    box-shadow: var(--kw-inner-shadow-shallow);
+    background: var(--quae-color-background);
+    box-shadow: var(--quae-inner-shadow-shallow);
     font-size: 17px;
 }
 

@@ -2,7 +2,7 @@
 Switch 开关：表示两种相互对立的状态间的切换，多用于触发「开/关」。
 使用方式如下：
 其中 isOn 是 boolean 类型
-<KeWeiSwitch v-model="isOn"></KeWeiSwitch>
+<QuaeSwitch v-model="isOn"></QuaeSwitch>
 -->
 
 <template>
@@ -53,8 +53,8 @@ onMounted(() => {
     /* display: flex;
     justify-content: right; */
     border-radius: 30px;
-    background: var(--kw-color-background);
-    box-shadow: var(--kw-inner-shadow-deep);
+    background: var(--quae-color-background);
+    box-shadow: var(--quae-inner-shadow-deep);
 }
 
 .switch-on {
@@ -77,7 +77,7 @@ onMounted(() => {
     display: flex;
     justify-content: center;
     border-radius: 35px;
-    background-color: var(--kw-color-background);
-    box-shadow: var(--kw-box-shadow-high);
+    background-color: var(--quae-color-background);
+    box-shadow: var(--quae-box-shadow-high);
 }
 </style>

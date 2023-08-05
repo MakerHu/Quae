@@ -1,12 +1,12 @@
 
 <!-- 使用方式如下：
     其中 type 的可取值为：high-low high-shallow flat-shallow low-shallow，表示按钮按之前和按之后的效果
-<KeWeiButton class="register-btn" type="flat-shallow" @click="goRegister">注 册</KeWeiButton>
+<QuaeButton class="register-btn" type="flat-shallow" @click="goRegister">注 册</QuaeButton>
 -->
 
 
 <template>
-    <div class="kewei-btn" :class="type">
+    <div class="quae-btn" :class="type">
         <slot>
             可微按钮组件
         </slot>
@@ -26,7 +26,7 @@ const props = defineProps({
 </script>
 
 <style scoped>
-.kewei-btn {
+.quae-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -35,8 +35,8 @@ const props = defineProps({
     height: 34px;
     padding: 5px 10px;
     /* margin: 3px 3px; */
-    background: var(--kw-color-background);
-    text-shadow: var(--kw-text-inner-shadow);
+    background: var(--quae-color-background);
+    text-shadow: var(--quae-text-inner-shadow);
     cursor: pointer;
 
     -webkit-user-select: none;
@@ -46,30 +46,30 @@ const props = defineProps({
 }
 
 .high-low {
-    box-shadow: var(--kw-box-shadow-high);
+    box-shadow: var(--quae-box-shadow-high);
 }
 
 .high-low:active {
-    box-shadow: var(--kw-box-shadow-low);
+    box-shadow: var(--quae-box-shadow-low);
 }
 
 .high-shallow {
-    box-shadow: var(--kw-box-shadow-high);
+    box-shadow: var(--quae-box-shadow-high);
 }
 
 .high-shallow:active {
-    box-shadow: var(--kw-inner-shadow-shallow);
+    box-shadow: var(--quae-inner-shadow-shallow);
 }
 
 .flat-shallow:active {
-    box-shadow: var(--kw-inner-shadow-shallow);
+    box-shadow: var(--quae-inner-shadow-shallow);
 }
 
 .low-shallow {
-    box-shadow: var(--kw-box-shadow-low);
+    box-shadow: var(--quae-box-shadow-low);
 }
 
 .low-shallow:active {
-    box-shadow: var(--kw-inner-shadow-shallow);
+    box-shadow: var(--quae-inner-shadow-shallow);
 }
 </style>

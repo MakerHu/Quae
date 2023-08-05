@@ -6,52 +6,52 @@
             </div>
 
             <div class="input-container" :onmouseover="onUnameMouseOver" :onmouseout="onUnameMouseOut" >
-                <KeWeiInput class="msg-input input-username" v-model="state.newUser.uname" icon="User" placeholder="用户名"
+                <QuaeInput class="msg-input input-username" v-model="state.newUser.uname" icon="User" placeholder="用户名"
                     :disabled="!unameEditable">
-                </KeWeiInput>
+                </QuaeInput>
                 <div id="uname-btn-container" class="edit-btn-container">
-                    <KeWeiButton class="edit-btn" @click="unameEditable = true" v-show="!unameEditable">
+                    <QuaeButton class="edit-btn" @click="unameEditable = true" v-show="!unameEditable">
                         <el-icon>
                             <Edit />
                         </el-icon>
-                    </KeWeiButton>
-                    <KeWeiButton class="edit-btn green-btn" @click="editUname" v-show="unameEditable">
+                    </QuaeButton>
+                    <QuaeButton class="edit-btn green-btn" @click="editUname" v-show="unameEditable">
                         <el-icon>
                             <Check />
                         </el-icon>
-                    </KeWeiButton>
-                    <KeWeiButton class="edit-btn" @click="cancelUname" v-show="unameEditable">
+                    </QuaeButton>
+                    <QuaeButton class="edit-btn" @click="cancelUname" v-show="unameEditable">
                         <el-icon>
                             <Close />
                         </el-icon>
-                    </KeWeiButton>
+                    </QuaeButton>
                 </div>
             </div>
             <div class="input-container" :onmouseover="onEmailMouseOver" :onmouseout="onEmailMouseOut" >
-                <KeWeiInput class="msg-input input-username" v-model="state.newUser.email" icon="Message" placeholder="邮箱"
+                <QuaeInput class="msg-input input-username" v-model="state.newUser.email" icon="Message" placeholder="邮箱"
                     :disabled="!emailEditable">
-                </KeWeiInput>
+                </QuaeInput>
                 <div id="email-btn-container" class="edit-btn-container">
-                    <KeWeiButton class="edit-btn" @click="emailEditable = true" v-show="!emailEditable">
+                    <QuaeButton class="edit-btn" @click="emailEditable = true" v-show="!emailEditable">
                         <el-icon>
                             <Edit />
                         </el-icon>
-                    </KeWeiButton>
-                    <KeWeiButton class="edit-btn green-btn" @click="editEmail" v-show="emailEditable">
+                    </QuaeButton>
+                    <QuaeButton class="edit-btn green-btn" @click="editEmail" v-show="emailEditable">
                         <el-icon>
                             <Check />
                         </el-icon>
-                    </KeWeiButton>
-                    <KeWeiButton class="edit-btn" @click="cancelEmail" v-show="emailEditable">
+                    </QuaeButton>
+                    <QuaeButton class="edit-btn" @click="cancelEmail" v-show="emailEditable">
                         <el-icon>
                             <Close />
                         </el-icon>
-                    </KeWeiButton>
+                    </QuaeButton>
                 </div>
             </div>
             <div class="input-container" :onmouseover="onPasswordMouseOver" :onmouseout="onPasswordMouseOut">
-                <KeWeiInput class="msg-input input-passowrd" v-model="state.newUser.password" type="password"
-                    icon="Lock" placeholder="密码" :disabled="!passwordEditable"></KeWeiInput>
+                <QuaeInput class="msg-input input-passowrd" v-model="state.newUser.password" type="password"
+                    icon="Lock" placeholder="密码" :disabled="!passwordEditable"></QuaeInput>
                 <el-icon class="check-tip check-tip-green inner-shadow-deep" v-show="false">
                     <CircleCheck />
                 </el-icon>
@@ -59,21 +59,21 @@
                     <CircleClose />
                 </el-icon>
                 <div id="password-btn-container" class="edit-btn-container">
-                    <KeWeiButton class="edit-btn" @click="passwordEditable = true" v-show="!passwordEditable">
+                    <QuaeButton class="edit-btn" @click="passwordEditable = true" v-show="!passwordEditable">
                         <el-icon>
                             <Edit />
                         </el-icon>
-                    </KeWeiButton>
-                    <KeWeiButton class="edit-btn green-btn" @click="editPassword" v-show="passwordEditable">
+                    </QuaeButton>
+                    <QuaeButton class="edit-btn green-btn" @click="editPassword" v-show="passwordEditable">
                         <el-icon>
                             <Check />
                         </el-icon>
-                    </KeWeiButton>
-                    <KeWeiButton class="edit-btn" @click="cancelPassword" v-show="passwordEditable">
+                    </QuaeButton>
+                    <QuaeButton class="edit-btn" @click="cancelPassword" v-show="passwordEditable">
                         <el-icon>
                             <Close />
                         </el-icon>
-                    </KeWeiButton>
+                    </QuaeButton>
                 </div>
             </div>
         </div>
@@ -88,8 +88,8 @@ import { ElMessage } from 'element-plus'
 
 import { updatePassword, updateEmail, updateUname, getUserById, updatePasswordAdmin } from '@/apis/UserApi'
 
-import KeWeiInput from '@/components/KeWeiInput.vue'
-import KeWeiButton from '@/components/KeWeiButton.vue'
+import QuaeInput from '@/components/QuaeInput.vue'
+import QuaeButton from '@/components/QuaeButton.vue'
 
 const store = useStore()
 const route = useRoute()
@@ -245,7 +245,7 @@ onMounted(() => {
 }
 
 .check-tip {
-    color: var(--kw-color-text-blue);
+    color: var(--quae-color-text-blue);
     position: absolute;
     right: 0;
     top: 20px;

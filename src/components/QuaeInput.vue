@@ -1,5 +1,5 @@
 <!-- 使用方式如下：
-<KeWeiInput class="login-input input-passowrd"
+<QuaeInput class="login-input input-passowrd"
         v-model="password"
         type="password"
         icon="Lock"

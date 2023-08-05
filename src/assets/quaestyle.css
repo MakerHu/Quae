@@ -7,8 +7,8 @@
   }
   
   *::-webkit-scrollbar-track {
-    background: var(--kw-color-background);
-    box-shadow: var(--kw-inner-shadow-shallow);
+    background: var(--quae-color-background);
+    box-shadow: var(--quae-inner-shadow-shallow);
     border-radius: 2px;
   }
   
@@ -22,47 +22,47 @@
   }
   
   *::-webkit-scrollbar-corner {
-    background: var(--kw-color-background);
+    background: var(--quae-color-background);
   }
   /* 设置滚动条样式：结束 */
   
   .shadow-high {
-    background: var(--kw-color-background);
-    box-shadow: var(--kw-box-shadow-high);
+    background: var(--quae-color-background);
+    box-shadow: var(--quae-box-shadow-high);
   }
   
   .shadow-low {
-    background: var(--kw-color-background);
-    box-shadow: var(--kw-box-shadow-low);
+    background: var(--quae-color-background);
+    box-shadow: var(--quae-box-shadow-low);
   }
   
   .shadow-high-hover:hover {
-    background: var(--kw-color-background);
-    box-shadow: var(--kw-box-shadow-low);
+    background: var(--quae-color-background);
+    box-shadow: var(--quae-box-shadow-low);
   }
   
   .inner-shadow {
-    background: var(--kw-color-background);
-    box-shadow: var(--kw-inner-shadow-shallow);
+    background: var(--quae-color-background);
+    box-shadow: var(--quae-inner-shadow-shallow);
   }
   
   .inner-shadow-deep {
-    background: var(--kw-color-background);
-    box-shadow: var(--kw-inner-shadow-deep);
+    background: var(--quae-color-background);
+    box-shadow: var(--quae-inner-shadow-deep);
   }
   
   .inner-shadow-hover:hover {
-    background: var(--kw-color-background);
-    box-shadow: var(--kw-inner-shadow-shallow);
+    background: var(--quae-color-background);
+    box-shadow: var(--quae-inner-shadow-shallow);
   }
   
   .inner-shadow-deep-hover:hover {
-    background: var(--kw-color-background);
-    box-shadow: var(--kw-inner-shadow-deep);
+    background: var(--quae-color-background);
+    box-shadow: var(--quae-inner-shadow-deep);
   }
   
   .text-inner-shadow {
-    text-shadow: var(--kw-text-inner-shadow);
+    text-shadow: var(--quae-text-inner-shadow);
   }
   
   .text-shadow {
@@ -74,7 +74,7 @@
   }
   
   .el-message {
-    text-shadow: var(--kw-text-inner-shadow);
+    text-shadow: var(--quae-text-inner-shadow);
     background: #e6e6e6;
     box-shadow: 29px 29px 58px #c4c4c4,
       -29px -29px 58px #ffffff;
@@ -101,6 +101,6 @@
   } */
   
   .el-tag {
-    background: var(--kw-color-background);
-    box-shadow: var(--kw-box-shadow-low);
+    background: var(--quae-color-background);
+    box-shadow: var(--quae-box-shadow-low);
   }

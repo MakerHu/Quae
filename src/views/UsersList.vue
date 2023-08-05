@@ -7,8 +7,8 @@
         <div class="shift-btn pointer" :class="pageParams.role === 'USER' ? 'inner-shadow' : 'shadow-high'" @click="onShift('USER')">
             用户</div>
     </div>
-    <KeWeiSearch class="search" v-model="pageParams.keywords" placeholder="搜索" @onSearch="search"></KeWeiSearch>
-    <KeWeiTable class="tools-table shadow-high" :table-settings="tableSettings" :data="state.usersPage.records"
+    <QuaeSearch class="search" v-model="pageParams.keywords" placeholder="搜索" @onSearch="search"></QuaeSearch>
+    <QuaeTable class="tools-table shadow-high" :table-settings="tableSettings" :data="state.usersPage.records"
         @onOpenClick="onOpenClick" @onEditClick="onEditClick" @row-dblclick="onRowDbClick">
         <template #role="{ row, column, $index }">
             {{ roleDict[row[column.property]] }}
@@ -19,8 +19,8 @@
         <template #updateTime="{ row, column, $index }">
             {{ parserDate(row[column.property]) }}
         </template>
-    </KeWeiTable>
-    <KeWeiPagination class="page" v-model:current-page="pageParams.current" v-model:page-size="pageParams.size"
+    </QuaeTable>
+    <QuaePagination class="page" v-model:current-page="pageParams.current" v-model:page-size="pageParams.size"
         :pager-count="pagerCount" :page-count="state.usersPage.pages" @update:current-page="handleCurrentChange" />
 </template>
 
@@ -29,9 +29,9 @@ import { ref, reactive, computed, onMounted, onUnmounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { getUsersList } from '@/apis/UserApi'
 
-import KeWeiTable from '@/components/KeWeiTable.vue'
-import KeWeiPagination from '@/components/KeWeiPagination.vue'
-import KeWeiSearch from '@/components/KeWeiSearch.vue'
+import QuaeTable from '@/components/QuaeTable.vue'
+import QuaePagination from '@/components/QuaePagination.vue'
+import QuaeSearch from '@/components/QuaeSearch.vue'
 
 const router = useRouter()
 
@@ -165,8 +165,8 @@ onUnmounted(() => {
 
 <style scoped>
 .shift {
-    background: var(--kw-color-background);
-    box-shadow: var(--kw-box-shadow-low);
+    background: var(--quae-color-background);
+    box-shadow: var(--quae-box-shadow-low);
     /* width: 200px; */
     height: 41px;
     margin-right: 10px;
