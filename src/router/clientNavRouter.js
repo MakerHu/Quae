@@ -1,7 +1,7 @@
 import { RouterView } from 'vue-router'
 
 /**
- * 管理端要在左侧生成导航栏的路由
+ * 客户端要在左侧生成导航栏的路由
  */
 const clientNavRouter =  // 客户端
 {

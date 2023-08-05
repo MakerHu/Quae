@@ -1,6 +1,6 @@
 
 <!-- 使用方式如下：
-    其中 type 的可取值为：high-low flat-shallow low-shallow，表示按钮按之前和按之后的效果
+    其中 type 的可取值为：high-low high-shallow flat-shallow low-shallow，表示按钮按之前和按之后的效果
 <KeWeiButton class="register-btn" type="flat-shallow" @click="goRegister">注 册</KeWeiButton>
 -->
 

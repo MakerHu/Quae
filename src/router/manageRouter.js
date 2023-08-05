@@ -10,7 +10,7 @@ const manageRouter =  // 管理端
     children: [
         {
             path: 'users',
-            meta: {title: '用户信息1'},
+            meta: {title: '用户信息'},
             component: RouterView,
             children: [
                 {

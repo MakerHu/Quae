@@ -21,7 +21,37 @@
 <script setup>
 import { onMounted, computed } from 'vue'
 
-const props = defineProps(['modelValue', 'placeholder', 'iconRight', 'icon', 'textAlign', 'type', 'disabled'])
+// const props = defineProps(['modelValue', 'placeholder', 'iconRight', 'icon', 'textAlign', 'type', 'disabled'])
+const props = defineProps({
+    modelValue: {
+        type: String,
+        default: ''
+    },
+    placeholder: {
+        type: String,
+        default: ''
+    },
+    iconRight: {
+        type: Boolean,
+        default: false
+    },
+    icon: {
+        type: String,
+        default: ''
+    },
+    textAlign: {
+        type: String,
+        default: 'left'
+    },
+    type: {
+        type: String,
+        default: ''
+    },
+    disabled: {
+        type: Boolean,
+        default: false
+    },
+})
 const emit = defineEmits(['update:modelValue', 'onEnterKey'])
 
 const value = computed({

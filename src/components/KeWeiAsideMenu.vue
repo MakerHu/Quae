@@ -1,9 +1,9 @@
 <template>
   <div class="local-center">
-    <KeWeiSwitch v-model="isCollapse"></KeWeiSwitch>
+    <KeWeiSwitch v-model="isOn"></KeWeiSwitch>
   </div>
 
-  <el-menu default-active="2" class="aside-menu" :collapse="isCollapse" @open="handleOpen" @close="handleClose"
+  <el-menu default-active="2" class="aside-menu" :collapse="!isOn" @open="handleOpen" @close="handleClose"
     @select="handleSelect">
     <template v-for="(first, index) in state.displayRouter.children">
       <el-sub-menu :index="first.path" v-if="first.children" :key="index">
@@ -54,7 +54,7 @@ const state = reactive({
 
   }
 })
-const isCollapse = ref(false)
+const isOn = ref(true)
 
 const user = computed(() => {
   return store.getters['authority/getUser']

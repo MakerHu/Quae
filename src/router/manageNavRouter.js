@@ -9,29 +9,41 @@ const manageNavRouter =  // 管理端
     component: () => import('@/layout/HeaderAsideLayout.vue'),
     children: [
         {
-            path: 'tools',
-            meta: {title: '工具管理', icon: 'Box'},
+            path: 'level01',
+            meta: {title: '一级菜单01', icon: 'Box'},
             component: RouterView,
             children: [
                 {
-                    path: 'list',
-                    meta: {title: '工具列表'},
+                    path: 'level01-01',
+                    meta: {title: '二级菜单01'},
                     component: () => import('@/views/Demo.vue')
                 },
                 {
-                    path: 'me',
-                    meta: {title: '我的工具'},
-                    component: () => import('@/views/Demo.vue')
+                    path: 'level01-02',
+                    meta: {title: '二级菜单02'},
+                    component: () => import('@/views/Demo.vue'),
+                    children: [
+                        {
+                            path: 'level03-01',
+                            meta: {title: '三级菜单01'},
+                            component: () => import('@/views/Demo.vue')
+                        },
+                        {
+                            path: 'level03-02',
+                            meta: {title: '三级菜单02'},
+                            component: () => import('@/views/Demo.vue')
+                        },
+                    ]
                 },
             ]
         },
         {
-            path: 'users',
-            meta: {title: '用户管理', icon: 'User'},
+            path: 'level02',
+            meta: {title: '一级菜单02', icon: 'User'},
             component: RouterView,
             children: [
                 {
-                    path: 'list',
+                    path: 'level02-01',
                     meta: {title: '用户列表'},
                     component: () => import('@/views/UsersList.vue')
                 },

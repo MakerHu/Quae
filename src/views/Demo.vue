@@ -1,13 +1,59 @@
 <template>
+    <h2>按钮组件</h2>
     <div class="base-panel">
-        <div>
-            <KeWeiTable class="m-table shadow-high" :table-settings="tableSettings" :data="tableData"
-                @onOpenClick="onOpenClick" @onEditClick="onEditClick" @row-dblclick="onRowDbClick">
-                <template #default="{ row, column, $index }">
-                    <div class="t-btn btn btn-hover" @click="handleClick({ row, column, $index })">按钮</div>
-                </template>
-            </KeWeiTable>
-        </div>
+        <KeWeiButton class="register-btn" type="high-shallow" @click="onBtnClick">按钮</KeWeiButton>
+    </div>
+
+    <h2>Switch开关</h2>
+    <div class="base-panel">
+        <KeWeiSwitch v-model="switchValue" @change="onSwitchChange"></KeWeiSwitch>
+        {{ switchValue }}
+    </div>
+
+    <h2>输入框</h2>
+    <div class="base-panel">
+        <h3>普通用法</h3>
+        <KeWeiInput v-model="inputValue" placeholder="请输入" @onEnterKey="onInputEntry" />
+        <h3>禁止编辑</h3>
+        <KeWeiInput v-model="inputValue" placeholder="请输入" disabled @onEnterKey="onInputEntry" />
+        <h3>左侧带图标</h3>
+        <KeWeiInput v-model="inputValue" icon="User" placeholder="请输入" @onEnterKey="onInputEntry" />
+        <h3>右侧带图标</h3>
+        <KeWeiInput v-model="inputValue" :iconRight="true" icon="User" placeholder="请输入" @onEnterKey="onInputEntry" />
+        <h3>输入文字位置（left, center, right）</h3>
+        <KeWeiInput v-model="inputValue" :iconRight="true" textAlign="right" icon="User" placeholder="请输入"
+            @onEnterKey="onInputEntry" />
+        <h3>密码</h3>
+        <KeWeiInput v-model="inputValue" type="password" icon="Lock" placeholder="密码" @onEnterKey="onInputEntry" />
+    </div>
+
+    <h2>搜索框</h2>
+    <div class="base-panel">
+        <KeWeiSearch class="search" v-model="searchKeyword" placeholder="搜索" @onSearch="onSearch"></KeWeiSearch>
+    </div>
+
+    <h2>表格组件</h2>
+    <div class="base-panel">
+        <KeWeiTable class="demo-table shadow-high" :table-settings="tableSettings" :data="tableData"
+            @onOpenClick="onOpenClick" @onEditClick="onEditClick" @row-dblclick="onRowDbClick">
+            <template #default="{ row, column, $index }">
+                <el-icon class="icon-btn pointer" @click="handleClick({ row, column, $index })">
+                    <EditPen />
+                </el-icon>
+                <el-icon class="icon-btn pointer" @click="handleClick({ row, column, $index })">
+                    <Edit />
+                </el-icon>
+            </template>
+            <template #attr3="{ row, column, $index }">
+                <el-tag>{{ row[column.property] }}</el-tag>
+            </template>
+        </KeWeiTable>
+    </div>
+
+    <h2>分页组件</h2>
+    <div class="base-panel">
+        <KeWeiPagination class="page" v-model:current-page="pageParams.current" v-model:page-size="pageParams.size"
+            :pager-count="pagerCount" :page-count="10" @update:current-page="handleCurrentChange" />
     </div>
 </template>
 
@@ -15,13 +61,48 @@
 import { ref, reactive, onMounted } from 'vue'
 import { useStore } from 'vuex'
 import { useRoute, useRouter } from 'vue-router'
+import { ElMessage } from 'element-plus'
 
 import KeWeiTable from '@/components/KeWeiTable.vue'
+import KeWeiButton from '@/components/KeWeiButton.vue'
+import KeWeiInput from '@/components/KeWeiInput.vue'
+import KeWeiSearch from '@/components/KeWeiSearch.vue'
+import KeWeiSwitch from '@/components/KeWeiSwitch.vue'
+import KeWeiPagination from '@/components/KeWeiPagination.vue'
 
 const store = useStore()
 const route = useRoute()
 const router = useRouter()
 
+/* 按钮相关代码-start */
+const onBtnClick = () => {
+    message('点击了按钮组件')
+}
+/* 按钮相关代码-end */
+
+/* switch开关相关代码-start */
+const switchValue = ref(false)
+const onSwitchChange = (newValue) => {
+    message('当前开关状态：' + newValue)
+}
+/* switch开关相关代码-end */
+
+/* 输入框相关代码-start */
+const inputValue = ref('')
+const onInputEntry = () => {
+    message('触发输入框')
+}
+/* 输入框相关代码-end */
+
+/* 搜索框相关代码-start */
+const searchKeyword = ref('')
+const onSearch = (keyword) => {
+    message('触发搜索框：' + keyword)
+}
+
+/* 搜索框相关代码-end */
+
+/* 表格相关代码-start */
 const tableSettings = reactive({
     maxHeight: 500,     // 表格的最大高度
     showOverflowTooltip: true,  // 内容过长时显示省略号并在鼠标滑过时提示
@@ -30,7 +111,7 @@ const tableSettings = reactive({
         fixed: 'right',     // 是否固定及固定位置
         open: '打开',       // 是否显示内置的打开按钮，通过@onOpenClick使用
         edit: '编辑',       // 是否显示内置的编辑按钮，通过@onEditClick使用
-        width: 130,         // 操作列宽度
+        width: 140,         // 操作列宽度
     },
     firstColumn: {          // 配置第一列的内容，不配置则不显示
         label: '序号',      // 第一列名称
@@ -38,9 +119,9 @@ const tableSettings = reactive({
     },
     attributes: [           // 配置表头字段属性
         {
-            label: '字段1', // 字段名称
+            label: '字段1（靠左固定）', // 字段名称
             prop: 'attr1',  // 字段对应的后端数据名
-            fixed: false,   // 是否固定列
+            fixed: true,   // 是否固定列
             // width: 100,  // 宽度
         },
         {
@@ -53,6 +134,7 @@ const tableSettings = reactive({
             label: '字段3',
             prop: 'attr3',
             fixed: false,
+            slot: true,
             // width: 200,
         },
         {
@@ -72,71 +154,95 @@ const tableSettings = reactive({
 
 const tableData = reactive([   // 数据记录（这是写死的用来模拟，具体根据业务场景从后端获取）
     {
-        attr1: '是独立访客safdasadfsad',
-        attr2: '阿斯顿噶时光',
-        attr3: 'ds方法',
-        attr4: '撒旦给',
-        attr5: 's打发撒旦飞洒多发点发',
+        attr1: '这是字段1的数据',
+        attr2: '这是字段2的数据',
+        attr3: '单元格插槽',
+        attr4: '这是字段4的数据',
+        attr5: '这是字段5的数据',
     },
     {
-        attr1: '是独立访客safdasadfsad',
-        attr2: '阿斯顿噶时光',
-        attr3: 'ds方法',
-        attr4: '撒旦给',
-        attr5: 's打发撒旦飞洒多发点发',
+        attr1: '这是字段1的数据',
+        attr2: '这是字段2的数据',
+        attr3: '单元格插槽',
+        attr4: '这是字段4的数据',
+        attr5: '这是字段5的数据',
     },
     {
-        attr1: '是独立访客safdasadfsad',
-        attr2: '阿斯顿噶时光',
-        attr3: 'ds方法',
-        attr4: '撒旦给',
-        attr5: 's打发撒旦飞洒多发点发',
+        attr1: '这是字段1的数据',
+        attr2: '这是字段2的数据',
+        attr3: '单元格插槽',
+        attr4: '这是字段4的数据',
+        attr5: '这是字段5的数据',
     },
     {
-        attr1: '是独立访客safdasadfsad',
-        attr2: '阿斯顿噶时光',
-        attr3: 'ds方法',
-        attr4: '撒旦给',
-        attr5: 's打发撒旦飞洒多发点发',
+        attr1: '这是字段1的数据',
+        attr2: '这是字段2的数据',
+        attr3: '单元格插槽',
+        attr4: '这是字段4的数据',
+        attr5: '这是字段5的数据',
     },
     {
-        attr1: '是独立访客safdasadfsad',
-        attr2: '阿斯顿噶时光',
-        attr3: 'ds方法',
-        attr4: '撒旦给',
-        attr5: 's打发撒旦飞洒多发点发',
+        attr1: '这是字段1的数据',
+        attr2: '这是字段2的数据',
+        attr3: '单元格插槽',
+        attr4: '这是字段4的数据',
+        attr5: '这是字段5的数据',
     },
     {
-        attr1: '是独立访客safdasadfsad',
-        attr2: '阿斯顿噶时光',
-        attr3: 'ds方法',
-        attr4: '撒旦给',
-        attr5: 's打发撒旦飞洒多发点发',
+        attr1: '这是字段1的数据',
+        attr2: '这是字段2的数据',
+        attr3: '单元格插槽',
+        attr4: '这是字段4的数据',
+        attr5: '这是字段5的数据',
     },
     {
-        attr1: '是独立访客safdasadfsad',
-        attr2: '阿斯顿噶时光',
-        attr3: 'ds方法',
-        attr4: '撒旦给',
-        attr5: 's打发撒旦飞洒多发点发',
+        attr1: '这是字段1的数据',
+        attr2: '这是字段2的数据',
+        attr3: '单元格插槽',
+        attr4: '这是字段4的数据',
+        attr5: '这是字段5的数据',
     },
 ])
 
 const onRowDbClick = (row, column, event) => {
+    message('打开控制台查看输出')
     console.log('双击行', { row, column, event })
 }
 
 const handleClick = (params) => {
+    message('打开控制台查看输出')
     console.log('编辑', params)
 }
 
 const onOpenClick = (params) => {
-    params.value
+    message('打开控制台查看输出')
     console.log('内部打开', params.row.attr1)
 }
 
 const onEditClick = (params) => {
+    message('打开控制台查看输出')
     console.log('内部编辑', params)
+}
+/* 表格相关代码-end */
+
+/* 分页相关代码-start */
+let pagerCount = ref(5)
+
+const pageParams = reactive({
+    current: 1,     //当前页
+    size: 13
+})
+
+const handleCurrentChange = (currentPage) => {
+    message('当前页：' + currentPage)
+}
+/* 分页相关代码-end */
+
+const message = (msg) => {
+    ElMessage({
+        message: msg,
+        offset: 30
+    })
 }
 
 onMounted(() => {
@@ -146,23 +252,19 @@ onMounted(() => {
 
 <style scoped>
 .base-panel {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
+    /* display: flex;
+    justify-content: center; */
+    /* padding: 20px; */
+    margin: 20px 0;
 }
 
-.m-table {
-    width: 800px
-        /* width: 100%; */
-}
-
-.t-btn {
-    padding: 2px;
+.icon-btn {
+    /* padding: 2px;
+    margin: 0 5px; */
     margin: 0 5px;
 }
 
-.code-panel {
-    width: 800px;
-    height: 500px;
+.demo-table {
+    border-radius: 10px;
 }
 </style>

@@ -28,7 +28,7 @@ const value = computed({
 })
 
 const onSearch = () =>{
-    emit('onSearch', value)
+    emit('onSearch', value.value)
 }
 
 onMounted(() => {
