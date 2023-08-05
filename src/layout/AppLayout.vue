@@ -10,6 +10,14 @@
                 </el-aside>
                 <el-container>
                     <el-main class="m-main">
+                        <el-page-header class="goback" @back="goBack" icon="ArrowLeftBold">
+                            <template #title>
+                                <span>返回</span>
+                            </template>
+                            <template #content>
+                                <span>{{ route.meta.title }}</span>
+                            </template>
+                        </el-page-header>
                         <router-view></router-view>
                     </el-main>
                     <!-- <el-footer class="m-footer">Footer</el-footer> -->
@@ -17,17 +25,23 @@
             </el-container>
         </el-container>
     </div>
-
-    <KeWeiChat></KeWeiChat>
 </template>
   
 <script setup>
 import KeWeiAsideMenu from '@/components/KeWeiAsideMenu.vue'
 import KeWeiHeadNav from '@/components/KeWeiHeadNav.vue'
-import KeWeiChat from '@/components/KeWeiChat.vue'
+import { useRoute, useRouter } from 'vue-router'
+
+const route = useRoute()
+const router = useRouter()
+
+const goBack = () => {
+    router.back()
+}
 </script>
   
 <style scoped>
+
 .common-layout {
     height: 100vh;
     width: 100vw;
@@ -42,7 +56,7 @@ import KeWeiChat from '@/components/KeWeiChat.vue'
     z-index: 999;
     background: var(--kw-color-background);
     box-shadow: var(--kw-box-shadow-high);
-    position:sticky;
+    position: sticky;
     top: 0;
 }
 
@@ -64,6 +78,10 @@ import KeWeiChat from '@/components/KeWeiChat.vue'
 
 .m-footer {
     background: var(--kw-color-background);
+}
+
+.goback {
+    margin-bottom: 20px;
 }
 </style>
   

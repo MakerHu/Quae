@@ -1,12 +1,4 @@
 <template>
-    <el-page-header class="goback" @back="goBack" icon="ArrowLeftBold">
-        <template #title>
-            <span>返回</span>
-        </template>
-        <template #content>
-            <span>个人中心</span>
-        </template>
-    </el-page-header>
     <div>
         <div class="msg-panel my-shadow">
             <div class="logo">
@@ -122,10 +114,6 @@ const state = reactive({
     }
 })
 
-const goBack = () => {
-    router.back()
-}
-
 const onUnameMouseOver = () => {
     if (!unameEditable.value) {
         document.getElementById('uname-btn-container').style.display = 'flex'
@@ -223,9 +211,6 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.goback {
-    margin-bottom: 10px;
-}
 .logo {
     display: flex;
     justify-content: center;

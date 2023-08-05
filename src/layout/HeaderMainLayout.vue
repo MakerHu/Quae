@@ -5,6 +5,14 @@
                 <KeWeiHeadNav :has-search="true"></KeWeiHeadNav>
             </el-header>
             <el-main class="m-main">
+                <el-page-header class="goback" @back="goBack" icon="ArrowLeftBold">
+                    <template #title>
+                        <span>返回</span>
+                    </template>
+                    <template #content>
+                        <span>{{ route.meta.title }}</span>
+                    </template>
+                </el-page-header>
                 <router-view></router-view>
             </el-main>
             <!-- <el-footer class="m-footer">©可微</el-footer> -->
@@ -15,6 +23,14 @@
 
 <script setup>
 import KeWeiHeadNav from '@/components/KeWeiHeadNav.vue'
+import { useRoute, useRouter } from 'vue-router'
+
+const route = useRoute()
+const router = useRouter()
+
+const goBack = () => {
+    router.back()
+}
 </script>
 
 <style scoped>
@@ -34,7 +50,7 @@ import KeWeiHeadNav from '@/components/KeWeiHeadNav.vue'
     z-index: 999;
     background: var(--kw-color-background);
     box-shadow: var(--kw-box-shadow-high);
-    position:sticky;
+    position: sticky;
     top: 0;
 }
 
@@ -63,5 +79,9 @@ import KeWeiHeadNav from '@/components/KeWeiHeadNav.vue'
 
 .m-backtop:hover {
     background: var(--kw-color-background);
+}
+
+.goback {
+    margin-bottom: 20px;
 }
 </style>

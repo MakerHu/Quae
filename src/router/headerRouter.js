@@ -14,14 +14,14 @@ const headerRouter =
         },
         {
             path: 'tools',
-            meta: { title: '可微工具箱', requiresAuth: false },
+            meta: { title: '首页', requiresAuth: false },
             component: () => import('@/views/ToolCards.vue')
         },
         {
             path: 'tools/:toolId',
             props: true,    // 将路径参数转换为组件props
-            meta: { title: '可微工具箱', requiresAuth: false },
-            component: () => import('@/views/Tool.vue')
+            meta: { title: '详情页', requiresAuth: false },
+            component: () => import('@/views/Demo.vue')
         },
     ]
 

@@ -1,13 +1,4 @@
 <template>
-    
-    <el-page-header class="goback" @back="goBack" icon="ArrowLeftBold">
-        <template #title>
-            <span>返回</span>
-        </template>
-        <template #content>
-            <span>{{ route.meta.title }}</span>
-        </template>
-    </el-page-header>
     <div class="base-panel">
         <div>
             <KeWeiTable class="m-table my-shadow" :table-settings="tableSettings" :data="tableData"
@@ -18,12 +9,6 @@
             </KeWeiTable>
         </div>
     </div>
-    <div class="base-panel">
-        <div class="code-panel">
-            <div>{{ codeValue }}</div>
-            <KeWeiCodemirror v-model="codeValue" lang="markdown" placeholder="请输入"></KeWeiCodemirror>
-        </div>
-    </div>
 </template>
 
 <script setup>
@@ -32,17 +17,10 @@ import { useStore } from 'vuex'
 import { useRoute, useRouter } from 'vue-router'
 
 import KeWeiTable from '@/components/KeWeiTable.vue'
-import KeWeiCodemirror from '@/components/KeWeiCodemirror.vue'
 
 const store = useStore()
 const route = useRoute()
 const router = useRouter()
-
-const codeValue = ref('')
-
-const goBack = () => {
-    router.back()
-}
 
 const tableSettings = reactive({
     maxHeight: 500,     // 表格的最大高度

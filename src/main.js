@@ -6,6 +6,7 @@ import router from './router'
 import store from './store'
 
 import './assets/main.css'
+import './assets/keweistyle.css'
 import * as ElIcons from '@element-plus/icons-vue'
 
 const app = createApp(App)

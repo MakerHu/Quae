@@ -16,12 +16,12 @@ const manageNavRouter =  // 管理端
                 {
                     path: 'list',
                     meta: {title: '工具列表'},
-                    component: () => import('@/views/Test.vue')
+                    component: () => import('@/views/Demo.vue')
                 },
                 {
                     path: 'me',
                     meta: {title: '我的工具'},
-                    component: () => import('@/views/Test.vue')
+                    component: () => import('@/views/Demo.vue')
                 },
             ]
         },

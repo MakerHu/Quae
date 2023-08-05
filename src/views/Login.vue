@@ -2,7 +2,7 @@
     <div class="login-container">
         <div class="slogan-panel">
             <div class="slogan text-inner-shadow inner-shadow-hover pointer" @click="onLogoClick()">
-                可 微 工 具 箱
+                可 微
             </div>
         </div>
         <div class="login-panel my-shadow">

@@ -52,20 +52,6 @@
   --kw-text-inner-shadow: 1px 3px 6px #fff, 0 0 0 #000, 1px 3px 6px #fff;
 }
 
-/* :root {
-  --kw-color-text-blue: rgba(0, 102, 204, 0.7);
-  --kw-color-background: #d7e6ee;
-  --kw-box-shadow-high: 2px 2px 4px #b7c4ca,
-  -2px -2px 4px #f7ffff;
-  --kw-box-shadow-low: 1px 1px 2px #b7c4ca,
-  -1px -1px 2px #f7ffff;
-  --kw-inner-shadow-shallow: inset 1px 1px 3px #b7c4ca,
-  inset -1px -1px 3px #f7ffff;
-  --kw-inner-shadow-deep: inset 2px 2px 5px #b7c4ca,
-  inset -2px -2px 5px #f7ffff;
-  --kw-text-inner-shadow: 1px 3px 6px #fff, 0 0 0 #000, 1px 3px 6px #fff;
-} */
-
 /* @media (prefers-color-scheme: dark) {
   :root {
     --color-background: var(--vt-c-black);

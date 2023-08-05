@@ -16,7 +16,7 @@ const clientNavRouter =  // 客户端
         {
             path: 'tools',
             meta: {title: '我的工具', icon: 'Box'},
-            component: () => import('@/views/MyTools.vue')
+            component: () => import('@/views/Demo.vue')
         },
     ]
     
