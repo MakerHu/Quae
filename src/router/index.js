@@ -41,17 +41,19 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
     // 继续前进 next()
     // 返回 false 以取消导航
-    const user = authority.state.user
-    if (!to.matched.some(r => r.meta.requiresAuth === false)) {
-        if (user.id <= 0 || user.id === null || user.id === undefined) {
-            next({path: '/login'})
-            ElMessage({
-                message: '请登录！',
-                offset: 30,
-                type: 'warning',
-            })
-        }
-    }
+
+    // const user = authority.state.user
+    // if (!to.matched.some(r => r.meta.requiresAuth === false)) {
+    //     if (user.id <= 0 || user.id === null || user.id === undefined) {
+    //         next({path: '/login'})
+    //         ElMessage({
+    //             message: '请登录！',
+    //             offset: 30,
+    //             type: 'warning',
+    //         })
+    //     }
+    // }
+    
     next()
 })
 
