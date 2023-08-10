@@ -3,7 +3,7 @@
     <img width="180" src="https://makerhu.github.io/quae-doc/logo.png" alt="logo" style="border-radius: 10px">
   </a>
   <p align="center">
-    <a href="https://github.com/MakerHu/Quae"><img src="https://img.shields.io/github/stars/MakerHu/Quae?logo=GitHub" alt="License"></a>
+    <a href="https://github.com/MakerHu/Quae"><img src="https://img.shields.io/github/stars/MakerHu/Quae?logo=GitHub" alt="Starts"></a>
     <a href="https://github.com/MakerHu/Quae/blob/main/LICENSE"><img src="https://img.shields.io/github/license/MakerHu/Quae" alt="License"></a>
   </p>
   <h1 align="center">Quae-魁</h1>
@@ -11,7 +11,7 @@
 
 ## 介绍
 
-Quae（发音为/kwei/）中文名为魁，是一款用于快速构建小型网站的轻量化模板。前端使用 `Vue3` `vite4` `Element-Plus` 开发，后端使用 `SpringCloud` 开发。它能够帮助你快速构建部署一个包含注册用户端、非注册用户端和管理端的 Web 应用程序。
+Quae（发音为/kwei/）中文名为魁，是一款新拟物风格的用于快速构建小型网站的轻量化模板。前端使用 `Vue3` `vite4` `Element-Plus` 开发，后端使用 `SpringCloud` 开发。它能够帮助你快速构建部署一个包含注册用户端、非注册用户端和管理端的 Web 应用程序。
 
 ## 文档
 
