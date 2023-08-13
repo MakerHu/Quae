@@ -25,8 +25,5 @@ const selectMenuItem = (item, index) => {
 .menu {
   background-color: var(--quae-color-background);
   color: var(--quae-color-text);
-  width: 200px;
-  /* padding: 5px; */
-  border: solid 1px black;
 }
 </style>

@@ -97,7 +97,7 @@ const menuItemClicked = (item, index) => {
 };
 
 const addMenu = () => {
-  router.addRoute({ path: "/sadf", component: Login });
+  router.addRoute({ path: "/sadf", component: () => import("@/views/Register.vue") });
   // 我们也可以使用 this.$route 或 route = useRoute() （在 setup 中）
   router.replace(router.currentRoute.value.fullPath);
 };

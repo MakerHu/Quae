@@ -2,10 +2,10 @@
     <ul>
     <li v-for="(item, index) in value" :key="index">
       <div :class="(item.children && item.children.length > 0) || level === 0 ? 'menu-sub-item' : 'menu-item'" @click="foldMenuItem(item, index)" :style="{'padding-left': indentation+'px'}">
-        <div class="menu-icon" v-if="item.meta.icon">
-          <q-icon :name="item.meta.icon" size="1.3em"></q-icon>
+        <div class="menu-icon" v-if="item.icon">
+          <q-icon :name="item.icon" size="1.3em"></q-icon>
         </div>
-        <div class="menu-item-title">{{ item.meta.title }}</div>
+        <div class="menu-item-title">{{ item.title }}</div>
         <div v-if="(item.children && item.children.length > 0) && item.collapse" class="menu-fold-icon">
           <q-icon name="arrow-up-bold" size="0.8em"></q-icon>
         </div>
@@ -35,7 +35,7 @@ const emit = defineEmits(['update:modelValue', "menu-item-clicked"]);
 
 const value = computed({
     get() {
-        return props.modelValue.filter((item) => item.meta.showMenu)
+        return props.modelValue.filter((item) => item.showMenu)
     },
     set(value) {
         emit('update:modelValue', value)
@@ -51,10 +51,6 @@ const level = computed(() => {
 });
 
 const selectMenuItem = (item, index) => {
-  if (!(item.children && item.children.length > 0)) {
-  router.push(item.path)
-    
-  }
   emit("menu-item-clicked", item, index);
 };
 
