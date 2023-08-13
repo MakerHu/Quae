@@ -9,10 +9,15 @@ import './assets/main.css'
 import './assets/quaestyle.css'
 import * as ElIcons from '@element-plus/icons-vue'
 
+// svg 组件
+import QIcon from "@/components/icon/QIcon.vue";
+import 'virtual:svg-icons-register'
+
 const app = createApp(App)
 for (const name in ElIcons) {
     app.component(name, ElIcons[name])
 }
+app.component('q-icon', QIcon)
 
 app.use(ElementPlus, { size: 'small', zIndex: 3000 })
 app.use(store)

@@ -70,8 +70,6 @@ const goBack = () => {
 .m-main {
     /* background: #f0f0f0; */
     background: var(--quae-color-background);
-    box-shadow: inset 2px 2px 4px #c9c9c9,
-        inset -2px -2px 4px #ffffff;
     height: calc(100vh - 60px);
     overflow: auto;
 }

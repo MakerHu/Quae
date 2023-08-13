@@ -101,6 +101,7 @@ ul {
 
 .el-menu {
   background-color: var(--quae-color-background);
+  border: none;
 }
 
 .el-menu-item.first-menu-item {

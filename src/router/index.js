@@ -8,6 +8,7 @@ import manageNavRouter from './manageNavRouter'
 import clientNavRouter from './clientNavRouter'
 import commonRouter from './commonRouter'
 import headerRouter from './headerRouter'
+import testRouter from './testRouter'
 
 import authority from '@/store/modules/authority.js'
 
@@ -27,6 +28,8 @@ const routes = [
     // 客户端
     clientRouter,
     clientNavRouter,
+
+    testRouter,
 ]
 
 // 创建并暴露一个路由器

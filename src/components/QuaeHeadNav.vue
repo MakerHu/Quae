@@ -11,6 +11,7 @@
             </QuaeSearch>
         </div>
         <div class="right">
+            <QuaeButton @click="shitchDarkMode">颜色</QuaeButton>
             <div class="avatar pointer">
                 <div class="username shadow-high text-none-select" @click="onAvatarClick()">
                     {{ username }}
@@ -49,6 +50,18 @@ defineProps({
         default: false
     }
 })
+
+const isDarkModeInWeb = () => {
+  return document.getElementsByTagName('body')[0].classList.value.includes("dark");
+}
+
+const shitchDarkMode = () => {
+    if(isDarkModeInWeb()) {
+        document.getElementsByTagName("body")[0].classList.remove("dark"); // 删除dark类
+    } else {
+        document.getElementsByTagName("body")[0].classList.add("dark"); // 添加dark类
+    }
+}
 
 const username = computed(() => {
     let uname = store.getters['authority/getUser'].uname

@@ -6,6 +6,7 @@ const authority = {
         user: {
             id: -1,
             uname: 'KW',
+            role: 'ADMIN',
             password: '',
         }
     },
