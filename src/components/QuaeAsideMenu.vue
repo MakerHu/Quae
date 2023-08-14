@@ -1,5 +1,5 @@
 <template>
-  <QMenu class="quae-aside-menu">
+  <QMenu :class="{ 'quae-aside-menu': isOn, 'quae-aside-menu__collapse': !isOn }">
     <template #header>
       <div class="quae-menu-header">
         <QuaeSwitch v-model="isOn"></QuaeSwitch>
@@ -7,6 +7,7 @@
     </template>
     <template #default>
       <QMenuItem
+        :collapse="!isOn"
         v-model="user.routes"
         @menu-item-clicked="menuItemClicked"
       ></QMenuItem>
@@ -46,6 +47,10 @@ onMounted(() => {});
 <style scoped>
 .quae-aside-menu {
   width: 200px;
+}
+
+.quae-aside-menu__collapse {
+  width: 66px;
 }
 
 .quae-menu-header {

@@ -11,7 +11,10 @@
             </QuaeSearch>
         </div>
         <div class="right">
-            <QuaeButton @click="shitchDarkMode">颜色</QuaeButton>
+            <QuaeSwitch @change="shitchDarkMode">
+                <template #on><q-icon name="sun" size="1em" /></template>
+                <template #off><q-icon name="moon" size="1em" /></template>
+            </QuaeSwitch>
             <div class="avatar pointer">
                 <div class="username shadow-high text-none-select" @click="onAvatarClick()">
                     {{ username }}
@@ -37,6 +40,7 @@ import { pinyin } from 'pinyin-pro'
 import emitter from '@/bus/eventBus'
 import QuaeSearch from '@/components/QuaeSearch.vue'
 import QuaeButton from '@/components/QuaeButton.vue'
+import QuaeSwitch from "@/components/QuaeSwitch.vue"
 
 const store = useStore()
 const router = useRouter()
@@ -141,6 +145,7 @@ onMounted(() => {
     width: 30%;
     display: flex;
     justify-content: right;
+    align-items: center;
 }
 
 .logo {
@@ -168,6 +173,7 @@ onMounted(() => {
 .avatar {
     width: 50px;
     height: 50px;
+    margin-left: 10px;
 }
 
 .username {
