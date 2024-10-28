@@ -1,7 +1,8 @@
 const common = {
     namespaced: true,
     state: sessionStorage.getItem('state') ? JSON.parse(sessionStorage.getItem('state'))['common'] : {
-        keyword: ''
+        keyword: '',
+        darkMode: true,
     },
     // 唯一可以修改state值的方法，同步阻塞，通过commit调用
     mutations: {

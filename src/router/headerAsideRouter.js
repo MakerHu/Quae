@@ -11,9 +11,9 @@ const headerAsideRouter =
     component: () => import("@/layout/HeaderAsideLayout.vue"),
     children: [
       {
-        path: "/testrouter/demo",
-        meta: { title: "测试2" },
-        component: () => import("@/views/Demo.vue"),
+        path: "home",
+        meta: { title: "首页" },
+        component: () => import("@/views/WhitePage.vue"),
       },
       // {
       //   path: "/test",
@@ -27,7 +27,7 @@ const headerAsideRouter =
       // },
       {
           path: "/404",
-          component: () => import("../views/ErrorPage.vue")
+          component: () => import("@/views/ErrorPage.vue")
       },
       // {
       //     path: "/:catchAll(.*)", // 不识别的path自动匹配404

@@ -6,7 +6,7 @@ import { createRouter, createWebHistory } from "vue-router";
 // import clientRouter from './clientRouter'
 // import manageNavRouter from './manageNavRouter'
 // import clientNavRouter from './clientNavRouter'
-// import commonRouter from './commonRouter'
+import commonRouter from './commonRouter'
 // import headerRouter from './headerRouter'
 import headerAsideRouter from "./headerAsideRouter";
 
@@ -18,7 +18,7 @@ import authority from "@/store/modules/authority.js";
 
 const routes = [
   // // 不带导航栏的公共部分
-  // commonRouter,
+  commonRouter,
   // // 带有头部导航栏的路由
   // headerRouter,
   // // 管理端
@@ -76,7 +76,6 @@ const genRouter = (menuItems) => {
 router.beforeEach((to, from, next) => {
   // 继续前进 next()
   // 返回 false 以取消导航
-
   const user = authority.state.user;
   // TODO 权限管理
   if (!user.routes.length) {
